@@ -4,6 +4,7 @@
     "slug": "borgapp",
     "scheme": "borgapp",
     "version": "1.0.0",
+    "entryPoint": "./app/index.tsx",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
