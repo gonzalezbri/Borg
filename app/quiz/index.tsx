@@ -49,14 +49,14 @@ const styles = StyleSheet.create({
     },
     container: {
         flex: 1,
-        backgroundColor: '#F0ede9', // Light yellow background color for the page
+        backgroundColor: '#F0ede9', 
         alignItems: 'center',
-        justifyContent: 'flex-start', // Align content to the top
+        justifyContent: 'flex-start', 
     },
     header: {
-        backgroundColor: '#162238', // Blue background color for the header
+        backgroundColor: '#162238', 
         width: '100%',
-        paddingVertical: 30, // Increased padding for the banner
+        paddingVertical: 30, 
         alignItems: 'center',
     },
     headerContent: {
@@ -64,25 +64,25 @@ const styles = StyleSheet.create({
         alignItems: 'center',
     },
     headerText: {
-        fontSize: 28, // Increased font size for the header text
+        fontSize: 28, 
         fontWeight: 'bold',
         color: 'white',
     },
     headerImage: {
-        width: 40, // Increased size for the header image
-        height: 40, // Increased size for the header image
+        width: 40, 
+        height: 40, 
         marginLeft: 10,
     },
     buttonContainer: {
-        marginTop: 30, // Increased spacing between banner and buttons
+        marginTop: 30, 
         alignItems: 'center',
     },
     button: {
-        backgroundColor: 'rgb(60 84 103)', // Light background color for the button
-        width: 250, // Increased width for the buttons
-        paddingVertical: 15, // Increased padding for the buttons
-        borderRadius: 30, // Rounded corners
-        marginBottom: 30, // Increased spacing between buttons
+        backgroundColor: 'rgb(60 84 103)', 
+        width: 250,
+        paddingVertical: 15, 
+        borderRadius: 30, 
+        marginBottom: 30, 
         alignItems: 'center',
     },
     buttonText: {
