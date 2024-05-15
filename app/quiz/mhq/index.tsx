@@ -29,7 +29,7 @@ const Mhq = () => {
             <Text style={styles.sectionText}>
                 Individuals are encouraged to reflect on their experiences and state of mind over the past two weeks when responding to the mental health assessment questions.
             </Text>
-        </View>
+            </View>
             <View style={styles.buttonContainer}>
             <Pressable
                 
