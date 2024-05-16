@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { View, Text, TouchableOpacity, StyleSheet, Pressable } from 'react-native';
+import { View, Text, TouchableOpacity, StyleSheet, Pressable, ScrollView, Linking } from 'react-native';
 import { RadioButton, Button } from 'react-native-paper';
 import { TestData, AnswerOption } from './data';
 import { router } from 'expo-router';
@@ -81,11 +81,51 @@ const Questionnaire: React.FC<Props> = ({ testId, data, onSubmit }: Props) => {
         if (showResults) {
             const score = data.calculateScore(selectedAnswers); // Pass the selected answers
             return (
+                <ScrollView contentContainerStyle={styles.scrollViewContainer}>
                 <View style={styles.resultContainer}>
-                    <Text style={[styles.resultText, { marginBottom: 60 }]}>{score}</Text>
-                    <Text style={[styles.disclaimer, { marginBottom: 60 }]}>Disclaimer: This tool should NOT be considered as a substitute for any professional medical service, NOR as a substitute for clinical judgment.</Text>
+                    <Text style={[styles.resultText, { marginBottom: 20 }]}>{score}</Text>
+                    <View style={styles.sectionContainer}>
+                            <Text style={styles.sectionTitle}>Next Steps</Text>
+                            <Text style={styles.nextStepsText}>
+                            Thanks for completing your assessment. Take a moment to review the results, which offer insights into your current situation based on your responses. Remember, this test is a preliminary tool and not a substitute for professional diagnosis. If the results indicate potential concerns, it's advisable to consult with an online therapist who can provide a more in-depth assessment and discuss appropriate next steps or treatment options.
+                            </Text>
+                    </View>
+                        {/* Resources section */}
+                        <View style={styles.sectionContainer}>
+                            <Text style={styles.sectionTitle}>Resources</Text>
+                            {/* Buttons or Pressables for resources */}
+                            <Pressable
+                                onPress={() => {
+                                    Linking.openURL('https://betterhelp.com/therapyhelpers');
+                                }}
+                                style={({ pressed }) => [
+                                    styles.resourceLink,
+                                    { backgroundColor: pressed ? '#E8A133' : 'transparent' },
+                                ]}
+                            >
+                                <View>
+                                    <Text style={styles.resourceLinkTitle}>Better Help</Text>
+                                    <Text style={styles.resourceLinkDescription}>Professional online counseling with a licensed therapist</Text>
+                                </View>
+                            </Pressable>
+                            <Pressable
+                                onPress={() => {
+                                    Linking.openURL('https://therapyhelpers.com/blog/your-guide-to-online-therapy-consultation-what-to-expect-during-your-first-online-therapy-session/');
+                                }}
+                                style={({ pressed }) => [
+                                    styles.resourceLink,
+                                    { backgroundColor: pressed ? '#E8A133' : 'transparent' },
+                                ]}
+                            >
+                                <View>
+                                    <Text style={styles.resourceLinkTitle}>Therapy Helpers</Text>
+                                    <Text style={styles.resourceLinkDescription}>Your Guide to Online Therapy: What to Expect?</Text>
+                                </View>
+                            </Pressable>
+                    </View>
+                        
                     <Pressable
-                        onPress={() => router.push(`../`)}
+                        onPress={() => router.back()}
                         style={({ pressed }) => [
                             styles.goBackButton,
                             { backgroundColor: pressed ? '#E8A133' : 'rgb(60 84 103)' },
@@ -93,7 +133,9 @@ const Questionnaire: React.FC<Props> = ({ testId, data, onSubmit }: Props) => {
                         >
                         <Text style={styles.GBbuttonText}>Go Back</Text>
                     </Pressable>
+                    <Text style={[styles.disclaimer, { marginBottom: 30 }]}>Disclaimer: This tool should NOT be considered as a substitute for any professional medical service, NOR as a substitute for clinical judgment.</Text>
                 </View>
+                </ScrollView>
             );
         }
         return null;
@@ -110,6 +152,66 @@ const Questionnaire: React.FC<Props> = ({ testId, data, onSubmit }: Props) => {
 };
 
 const styles = StyleSheet.create({
+    resourceLink: {
+        paddingVertical: 15,
+        paddingHorizontal: 20,
+        marginVertical: 10,
+        borderRadius: 10,
+        borderColor: 'rgb(60, 84, 103)',
+        borderTopWidth:1,
+    },
+
+    resourceLinkTitle: {
+        fontSize: 18,
+        fontWeight: 'bold',
+        color: 'black',
+        textAlign: 'left',
+    },
+    
+    resourceLinkDescription: {
+        fontSize: 16,
+        color: 'black',
+        textAlign: 'left',
+    },
+    nextStepsText: {
+        fontSize: 20,
+        borderRadius: 10, 
+        padding: 10, 
+        },
+    scrollViewContainer: {
+        flexGrow: 1,
+    },
+    sectionContainer: {
+        marginVertical: 20,
+        padding: 5,
+        backgroundColor: 'rgba(255, 255, 255, 0.8)', 
+        borderRadius: 10, 
+        elevation: 5, 
+        shadowColor: 'black', 
+        shadowOpacity: 0.3, 
+        shadowRadius: 5, 
+        shadowOffset: { width: 0, height: 2 }, 
+        marginHorizontal: 10,
+        },
+    sectionTitle: {
+        fontSize: 22,
+        fontWeight: 'bold',
+        padding: 10,
+    },
+    resourceButtonsContainer: {
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+    },
+    resourceButton: {
+        paddingVertical: 10,
+        paddingHorizontal: 20,
+        borderRadius: 8,
+    },
+    resourceButtonText: {
+        color: 'white',
+        fontWeight: 'bold',
+        fontSize: 16,
+    },
     answerContainer: {
         flexDirection: 'row',
         alignItems: 'center',
@@ -128,11 +230,11 @@ const styles = StyleSheet.create({
         width: '100%',
     }, 
     selectedAnswer: {
-        borderColor: 'blue', // Add blue border
-        shadowColor: 'blue', // Add blue shadow color
-        shadowOffset: { width: 0, height: 2 }, // Adjust shadow offset as needed
-        shadowOpacity: 0.5, // Adjust shadow opacity as needed
-        shadowRadius: 3, // Adjust shadow radius as needed
+        borderColor: 'blue', 
+        shadowColor: 'blue', 
+        shadowOffset: { width: 0, height: 2 }, 
+        shadowOpacity: 0.5, 
+        shadowRadius: 3, 
         elevation: 5, // Adjust elevation as needed for Android
     },
     continueButton: {
@@ -147,11 +249,11 @@ const styles = StyleSheet.create({
         alignItems: 'center',
     },
     button: {
-        backgroundColor: 'rgb(60 84 103)', // Light background color for the button
-        width: 250, // Increased width for the buttons
-        paddingVertical: 15, // Increased padding for the buttons
-        borderRadius: 30, // Rounded corners
-        marginBottom: 30, // Increased spacing between buttons
+        backgroundColor: 'rgb(60 84 103)', 
+        width: 250, 
+        paddingVertical: 15, 
+        borderRadius: 30, 
+        marginBottom: 30, 
         alignItems: 'center',
     },
     buttonText: {
@@ -166,6 +268,7 @@ const styles = StyleSheet.create({
         borderRadius: 30,
         marginTop: 30,
         alignItems: 'center',
+        marginBottom: 20,
     },
     GBbuttonText: {
         color: 'white',

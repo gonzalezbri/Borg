@@ -158,6 +158,7 @@ const styles = StyleSheet.create({
         marginVertical: 10,
         borderRadius: 10,
         borderColor: 'rgb(60, 84, 103)',
+        borderTopWidth:1,
     },
 
     resourceLinkTitle: {
@@ -229,11 +230,11 @@ const styles = StyleSheet.create({
         width: '100%',
     }, 
     selectedAnswer: {
-        borderColor: 'blue', // Add blue border
-        shadowColor: 'blue', // Add blue shadow color
-        shadowOffset: { width: 0, height: 2 }, // Adjust shadow offset as needed
-        shadowOpacity: 0.5, // Adjust shadow opacity as needed
-        shadowRadius: 3, // Adjust shadow radius as needed
+        borderColor: 'blue', 
+        shadowColor: 'blue', 
+        shadowOffset: { width: 0, height: 2 }, 
+        shadowOpacity: 0.5, 
+        shadowRadius: 3, 
         elevation: 5, // Adjust elevation as needed for Android
     },
     continueButton: {
@@ -248,11 +249,11 @@ const styles = StyleSheet.create({
         alignItems: 'center',
     },
     button: {
-        backgroundColor: 'rgb(60 84 103)', // Light background color for the button
-        width: 250, // Increased width for the buttons
-        paddingVertical: 15, // Increased padding for the buttons
-        borderRadius: 30, // Rounded corners
-        marginBottom: 30, // Increased spacing between buttons
+        backgroundColor: 'rgb(60 84 103)', 
+        width: 250, 
+        paddingVertical: 15, 
+        borderRadius: 30, 
+        marginBottom: 30, 
         alignItems: 'center',
     },
     buttonText: {

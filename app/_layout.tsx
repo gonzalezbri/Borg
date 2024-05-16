@@ -1,14 +1,18 @@
 import { Stack } from "expo-router";
+import 'react-native-reanimated';
 
 const RootLayout = () => {
     return(
-        <Stack>
+        <Stack screenOptions={{
+            headerTitle: ' ', // Set a default empty title
+            headerStyle: { backgroundColor: '#A3CEF1' }, // Set default header style
+            }}>
             <Stack.Screen name="index" options={{
                 headerTitle:'Home',
                 headerShown:false,
             }}/>
             <Stack.Screen name="quiz/index" options={{
-                headerTitle:'      ',
+                headerTitle:'   ',
                 headerStyle:{
                     backgroundColor:'#F0ede9'
                 }

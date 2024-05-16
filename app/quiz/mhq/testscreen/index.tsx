@@ -1,7 +1,6 @@
 import React from 'react';
 import Questionnaire from '../questionnaire';
 import testData from '../data';
-import { Stack } from 'expo-router';
 
 const MyTestScreen = () => {
     const submitAnswer = (answers: number[]) => {
