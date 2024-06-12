@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, Image, StyleSheet, Pressable } from 'react-native';
+import { View, Text, Image, StyleSheet, Pressable, ScrollView } from 'react-native';
 import { router } from 'expo-router';
 
 
@@ -7,6 +7,7 @@ const quizImage = require('../../../assets/btrfly-logo.jpg');
 
 const Sett = () => {
     return (
+        <ScrollView contentContainerStyle={styles.scrollViewContainer}>
         <View style={styles.container}>
             <View style={styles.header}>
                 <View style={styles.headerContent}>
@@ -42,10 +43,14 @@ const Sett = () => {
                 </Pressable>
             </View>
         </View>
+        </ScrollView>
     );
 };
 
 const styles = StyleSheet.create({
+    scrollViewContainer: {
+        flexGrow: 1,
+    },
     container2: {
         padding: 20,
     },

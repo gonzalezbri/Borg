@@ -97,6 +97,7 @@ const styles = StyleSheet.create({
     },
     buttonContainer: { 
         alignItems: 'center',
+        marginBottom: 40,
     },
     button: {
         backgroundColor: 'rgb(60 84 103)', // Light background color for the button

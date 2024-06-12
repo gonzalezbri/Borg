@@ -90,6 +90,9 @@ const Questionnaire: React.FC<Props> = ({ testId, data, onSubmit }: Props) => {
                             Thanks for completing your assessment. Take a moment to review the results, which offer insights into your current situation based on your responses. Remember, this test is a preliminary tool and not a substitute for professional diagnosis. If the results indicate potential concerns, it's advisable to consult with an online therapist who can provide a more in-depth assessment and discuss appropriate next steps or treatment options.
                             </Text>
                     </View>
+                    <View style={styles.sectionContainer}>
+                    <Text style={styles.nextStepsText}>As a BetterHelp affiliate, we will receive compensation from BetterHelp if you purchase products or services through the links provided on this page.</Text>
+                    </View>
                         {/* Resources section */}
                         <View style={styles.sectionContainer}>
                             <Text style={styles.sectionTitle}>Resources</Text>
@@ -104,7 +107,8 @@ const Questionnaire: React.FC<Props> = ({ testId, data, onSubmit }: Props) => {
                                 ]}
                             >
                                 <View>
-                                    <Text style={styles.resourceLinkTitle}>Better Help</Text>
+                                    <Text style={styles.adtag}>#Ad</Text>
+                                    <Text style={styles.resourceLinkTitle}>BetterHelp</Text>
                                     <Text style={styles.resourceLinkDescription}>Professional online counseling with a licensed therapist</Text>
                                 </View>
                             </Pressable>
@@ -152,6 +156,13 @@ const Questionnaire: React.FC<Props> = ({ testId, data, onSubmit }: Props) => {
 };
 
 const styles = StyleSheet.create({
+    adtag:{
+        fontSize: 16,
+        fontWeight: 'bold',
+        color: 'black',
+        textAlign: 'left',
+
+    },
     resourceLink: {
         paddingVertical: 15,
         paddingHorizontal: 20,

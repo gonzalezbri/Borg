@@ -4,8 +4,8 @@ import 'react-native-reanimated';
 const RootLayout = () => {
     return(
         <Stack screenOptions={{
-            headerTitle: ' ', // Set a default empty title
-            headerStyle: { backgroundColor: '#A3CEF1' }, // Set default header style
+            headerTitle: ' ', 
+            headerStyle: { backgroundColor: '#A3CEF1' }, 
             }}>
             <Stack.Screen name="index" options={{
                 headerTitle:'Home',
@@ -20,31 +20,31 @@ const RootLayout = () => {
             <Stack.Screen name="quiz/at/index" options={{
                 headerTitle:'      ',
                 headerStyle:{
-                    backgroundColor:'#F0ede9'
+                    backgroundColor:'#FDBF60'
                 }
             }}/>
             <Stack.Screen name="quiz/dt/index" options={{
                 headerTitle:'      ',
                 headerStyle:{
-                    backgroundColor:'#F0ede9'
+                    backgroundColor:'#FDBF60'
                 }
             }}/>
             <Stack.Screen name="quiz/mdt/index" options={{
                 headerTitle:'      ',
                 headerStyle:{
-                    backgroundColor:'#F0ede9'
+                    backgroundColor:'#FDBF60'
                 }
             }}/>
             <Stack.Screen name="quiz/mhq/index" options={{
                 headerTitle:'      ',
                 headerStyle:{
-                    backgroundColor:'#F0ede9'
+                    backgroundColor:'#FDBF60'
                 }
             }}/>
             <Stack.Screen name="quiz/set/index" options={{
                 headerTitle:'      ',
                 headerStyle:{
-                    backgroundColor:'#F0ede9'
+                    backgroundColor:'#FDBF60'
                 }
             }}/>
         </Stack>

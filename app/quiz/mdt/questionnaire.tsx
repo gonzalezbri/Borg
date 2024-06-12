@@ -92,6 +92,9 @@ const Questionnaire: React.FC<Props> = ({ testId, data, onSubmit }: Props) => {
                     </View>
                         {/* Resources section */}
                         <View style={styles.sectionContainer}>
+                        <Text style={styles.nextStepsText}>As a BetterHelp affiliate, we will receive compensation from BetterHelp if you purchase products or services through the links provided on this page.</Text>
+                        </View>
+                        <View style={styles.sectionContainer}>
                             <Text style={styles.sectionTitle}>Resources</Text>
                             {/* Buttons or Pressables for resources */}
                             <Pressable
@@ -104,7 +107,8 @@ const Questionnaire: React.FC<Props> = ({ testId, data, onSubmit }: Props) => {
                                 ]}
                             >
                                 <View>
-                                    <Text style={styles.resourceLinkTitle}>Better Help</Text>
+                                    <Text style={styles.adtag}>#Ad</Text>
+                                    <Text style={styles.resourceLinkTitle}>BetterHelp</Text>
                                     <Text style={styles.resourceLinkDescription}>Professional online counseling with a licensed therapist</Text>
                                 </View>
                             </Pressable>
@@ -152,6 +156,13 @@ const Questionnaire: React.FC<Props> = ({ testId, data, onSubmit }: Props) => {
 };
 
 const styles = StyleSheet.create({
+    adtag:{
+        fontSize: 16,
+        fontWeight: 'bold',
+        color: 'black',
+        textAlign: 'left',
+
+    },
     resourceLink: {
         paddingVertical: 15,
         paddingHorizontal: 20,
