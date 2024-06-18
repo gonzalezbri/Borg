@@ -10,14 +10,15 @@
     "splash": {
       "image": "./assets/main.png",
       "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
+      "backgroundColor": "#162238"
     },
     "assetBundlePatterns": [
       "**/*"
     ],
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "com.bgonzalez4717.borgapp"
+      "bundleIdentifier": "com.bgonzalez4717.borgapp",
+      "buildNumber": "3"
     },
     "android": {
       "adaptiveIcon": {
