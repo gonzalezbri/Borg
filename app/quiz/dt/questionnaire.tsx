@@ -127,6 +127,53 @@ const Questionnaire: React.FC<Props> = ({ testId, data, onSubmit }: Props) => {
                                 </View>
                             </Pressable>
                     </View>
+                    {/* Sources section */}
+                    <View style={styles.sectionContainer}>
+                            <Text style={styles.sectionTitle}>Sources</Text>
+                            {/* Buttons or Pressables for resources */}
+                            <Pressable
+                                onPress={() => {
+                                    Linking.openURL('https://doi.org/10.1176/appi.books.9780890425596');
+                                }}
+                                style={({ pressed }) => [
+                                    styles.resourceLink,
+                                    { backgroundColor: pressed ? '#E8A133' : 'transparent' },
+                                ]}
+                            >
+                                <View>
+                                    <Text style={styles.SourceLinkTitle}>American Psychiatric Association</Text>
+                                    <Text style={styles.SourceLinkDescription}>(2013). Diagnostic and statistical manual of mental disorders (5th ed.).</Text>
+                                </View>
+                            </Pressable>
+                            <Pressable
+                                onPress={() => {
+                                    Linking.openURL('https://pubmed.ncbi.nlm.nih.gov/11578668/');
+                                }}
+                                style={({ pressed }) => [
+                                    styles.resourceLink,
+                                    { backgroundColor: pressed ? '#E8A133' : 'transparent' },
+                                ]}
+                            >
+                                <View>
+                                    <Text style={styles.SourceLinkTitle}>Bech P, Rasmussen NA, Olsen LR, Noerholm V, Abildgaard W.</Text>
+                                    <Text style={styles.SourceLinkDescription}>The sensitivity and specificity of the Major Depression Inventory, using the Present State Examination as the index of diagnostic validity.  J Affect Disord. 2001; 66(2-3):159-64. </Text>
+                                </View>
+                            </Pressable>
+                            <Pressable
+                                onPress={() => {
+                                    Linking.openURL('https://pubmed.ncbi.nlm.nih.gov/12622314/');
+                                }}
+                                style={({ pressed }) => [
+                                    styles.resourceLink,
+                                    { backgroundColor: pressed ? '#E8A133' : 'transparent' },
+                                ]}
+                            >
+                                <View>
+                                    <Text style={styles.SourceLinkTitle}>Olsen LR, Jensen DV, Noerholm V, Martiny K, Bech P.</Text>
+                                    <Text style={styles.SourceLinkDescription}>The internal and external validity of the Major Depression Inventory in measuring severity of depressive states. Psychol Med. 2003; 33(2):351-6.  </Text>
+                                </View>
+                            </Pressable>
+                    </View>
                         
                     <Pressable
                         onPress={() => router.back()}
@@ -156,6 +203,18 @@ const Questionnaire: React.FC<Props> = ({ testId, data, onSubmit }: Props) => {
 };
 
 const styles = StyleSheet.create({
+    SourceLinkTitle: {
+        fontSize: 15,
+        fontWeight: 'bold',
+        color: 'black',
+        textAlign: 'left',
+    },
+    
+    SourceLinkDescription: {
+        fontSize: 13,
+        color: 'black',
+        textAlign: 'left',
+    },
     nextStepsText2: {
         fontSize: 14,
         borderRadius: 10, 

@@ -127,6 +127,54 @@ const Questionnaire: React.FC<Props> = ({ testId, data, onSubmit }: Props) => {
                                 </View>
                             </Pressable>
                     </View>
+
+                    {/* Sources section */}
+                    <View style={styles.sectionContainer}>
+                            <Text style={styles.sectionTitle}>Sources</Text>
+                            {/* Buttons or Pressables for resources */}
+                            <Pressable
+                                onPress={() => {
+                                    Linking.openURL('https://doi.org/10.1176/appi.books.9780890425596');
+                                }}
+                                style={({ pressed }) => [
+                                    styles.resourceLink,
+                                    { backgroundColor: pressed ? '#E8A133' : 'transparent' },
+                                ]}
+                            >
+                                <View>
+                                    <Text style={styles.SourceLinkTitle}>American Psychiatric Association</Text>
+                                    <Text style={styles.SourceLinkDescription}>(2013). Diagnostic and statistical manual of mental disorders (5th ed.).</Text>
+                                </View>
+                            </Pressable>
+                            <Pressable
+                                onPress={() => {
+                                    Linking.openURL('https://pubmed.ncbi.nlm.nih.gov/16717171/');
+                                }}
+                                style={({ pressed }) => [
+                                    styles.resourceLink,
+                                    { backgroundColor: pressed ? '#E8A133' : 'transparent' },
+                                ]}
+                            >
+                                <View>
+                                    <Text style={styles.SourceLinkTitle}>Spitzer RL, Kroenke K, Williams JB, Löwe B</Text>
+                                    <Text style={styles.SourceLinkDescription}>A brief measure for assessing generalized anxiety disorder: the 'GAD-7'/ Arch Intern Med. 2006 May 22;166(10):1092-7.</Text>
+                                </View>
+                            </Pressable>
+                            <Pressable
+                                onPress={() => {
+                                    Linking.openURL('https://pubmed.ncbi.nlm.nih.gov/18388841/');
+                                }}
+                                style={({ pressed }) => [
+                                    styles.resourceLink,
+                                    { backgroundColor: pressed ? '#E8A133' : 'transparent' },
+                                ]}
+                            >
+                                <View>
+                                    <Text style={styles.SourceLinkTitle}>Löwe B, Decker O, Müller S, Brähler E, Schellberg D, Herzog W, Herzberg PY.</Text>
+                                    <Text style={styles.SourceLinkDescription}>Validation and standardization of the Generalized Anxiety Disorder Screener (GAD-7) in the general population. Med Care. 2008; 46(3):266-74.</Text>
+                                </View>
+                            </Pressable>
+                    </View>
                         
                     <Pressable
                         onPress={() => router.back()}
@@ -184,6 +232,18 @@ const styles = StyleSheet.create({
     
     resourceLinkDescription: {
         fontSize: 20,
+        color: 'black',
+        textAlign: 'left',
+    },
+    SourceLinkTitle: {
+        fontSize: 15,
+        fontWeight: 'bold',
+        color: 'black',
+        textAlign: 'left',
+    },
+    
+    SourceLinkDescription: {
+        fontSize: 13,
         color: 'black',
         textAlign: 'left',
     },

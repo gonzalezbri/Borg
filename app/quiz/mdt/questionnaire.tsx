@@ -127,6 +127,81 @@ const Questionnaire: React.FC<Props> = ({ testId, data, onSubmit }: Props) => {
                                 </View>
                             </Pressable>
                     </View>
+                    {/* Sources section */}
+                    <View style={styles.sectionContainer}>
+                            <Text style={styles.sectionTitle}>Sources</Text>
+                            {/* Buttons or Pressables for resources */}
+                            <Pressable
+                                onPress={() => {
+                                    Linking.openURL('https://pubmed.ncbi.nlm.nih.gov/10550853/');
+                                }}
+                                style={({ pressed }) => [
+                                    styles.resourceLink,
+                                    { backgroundColor: pressed ? '#E8A133' : 'transparent' },
+                                ]}
+                            >
+                                <View>
+                                    <Text style={styles.SourceLinkTitle}>Akiskal HS, Pinto O.</Text>
+                                    <Text style={styles.SourceLinkDescription}>The evolving bipolar spectrum. Prototypes I, II, III, and IV.  Psychiatr Clin North Am. 1999; 22:517–524.</Text>
+                                </View>
+                            </Pressable>
+                            <Pressable
+                                onPress={() => {
+                                    Linking.openURL('https://doi.org/10.1176/appi.books.9780890425596');
+                                }}
+                                style={({ pressed }) => [
+                                    styles.resourceLink,
+                                    { backgroundColor: pressed ? '#E8A133' : 'transparent' },
+                                ]}
+                            >
+                                <View>
+                                    <Text style={styles.SourceLinkTitle}>American Psychiatric Association</Text>
+                                    <Text style={styles.SourceLinkDescription}>(2013). Diagnostic and statistical manual of mental disorders (5th ed.).</Text>
+                                </View>
+                            </Pressable>
+                            <Pressable
+                                onPress={() => {
+                                    Linking.openURL('https://pubmed.ncbi.nlm.nih.gov/11058490/');
+                                }}
+                                style={({ pressed }) => [
+                                    styles.resourceLink,
+                                    { backgroundColor: pressed ? '#E8A133' : 'transparent' },
+                                ]}
+                            >
+                                <View>
+                                    <Text style={styles.SourceLinkTitle}>Hirschfeld, R. et al.</Text>
+                                    <Text style={styles.SourceLinkDescription}>Development and validation of a screening instrument for bipolar spectrum disorder: the Mood Disorder Questionnaire. American Journal of Psychiatry 157:11 (November 2000) 1873-1875</Text>
+                                </View>
+                            </Pressable>
+                            <Pressable
+                                onPress={() => {
+                                    Linking.openURL('https://pubmed.ncbi.nlm.nih.gov/7989643/');
+                                }}
+                                style={({ pressed }) => [
+                                    styles.resourceLink,
+                                    { backgroundColor: pressed ? '#E8A133' : 'transparent' },
+                                ]}
+                            >
+                                <View>
+                                    <Text style={styles.SourceLinkTitle}>Lish JD, Dime-Meenan S, Whybrow PC, et al.</Text>
+                                    <Text style={styles.SourceLinkDescription}>The National Depressive and Manic-depressive Association (DMDA) survey of bipolar members. J Affect Disord. 1994; 31:281–294.  </Text>
+                                </View>
+                            </Pressable>
+                            <Pressable
+                                onPress={() => {
+                                    Linking.openURL('https://www.ncbi.nlm.nih.gov/pmc/articles/PMC314375/');
+                                }}
+                                style={({ pressed }) => [
+                                    styles.resourceLink,
+                                    { backgroundColor: pressed ? '#E8A133' : 'transparent' },
+                                ]}
+                            >
+                                <View>
+                                    <Text style={styles.SourceLinkTitle}>Robert M. A. Hirschfeld, M.D.</Text>
+                                    <Text style={styles.SourceLinkDescription}>The Mood Disorder Questionnaire: A Simple, Patient-Rated Screening Instrument for Bipolar Disorder. Prim Care Companion J Clin Psychiatry. 2002; 4(1): 9–11.</Text>
+                                </View>
+                            </Pressable>
+                    </View>
                         
                     <Pressable
                         onPress={() => router.back()}
@@ -156,6 +231,18 @@ const Questionnaire: React.FC<Props> = ({ testId, data, onSubmit }: Props) => {
 };
 
 const styles = StyleSheet.create({
+    SourceLinkTitle: {
+        fontSize: 15,
+        fontWeight: 'bold',
+        color: 'black',
+        textAlign: 'left',
+    },
+    
+    SourceLinkDescription: {
+        fontSize: 13,
+        color: 'black',
+        textAlign: 'left',
+    },
     adtag:{
         fontSize: 16,
         color: 'black',

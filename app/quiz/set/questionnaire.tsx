@@ -127,6 +127,75 @@ const Questionnaire: React.FC<Props> = ({ testId, data, onSubmit }: Props) => {
                                 </View>
                             </Pressable>
                     </View>
+                    {/* Sources section */}
+                    <View style={styles.sectionContainer}>
+                            <Text style={styles.sectionTitle}>Sources</Text>
+                            {/* Buttons or Pressables for resources */}
+                            <Pressable
+                                onPress={() => {
+                                    Linking.openURL('https://pubmed.ncbi.nlm.nih.gov/26151640/');
+                                }}
+                                style={({ pressed }) => [
+                                    styles.resourceLink,
+                                    { backgroundColor: pressed ? '#E8A133' : 'transparent' },
+                                ]}
+                            >
+                                <View>
+                                    <Text style={styles.SourceLinkTitle}>Baumeister, R. F., Campbell, J. D., Krueger, J. I., & Vohs, K. D.</Text>
+                                    <Text style={styles.SourceLinkDescription}>Does High Self-Esteem Cause Better Performance, Interpersonal Success, Happiness, or Healthier Lifestyles? Psychological Science in the Public Interest. 2003; 4, 1-44.</Text>
+                                </View>
+                            </Pressable>
+                            <Pressable
+                                onPress={() => {
+                                    Linking.openURL('https://pubmed.ncbi.nlm.nih.gov/17992972/');
+                                }}
+                                style={({ pressed }) => [
+                                    styles.resourceLink,
+                                    { backgroundColor: pressed ? '#E8A133' : 'transparent' },
+                                ]}
+                            >
+                                <View>
+                                    <Text style={styles.SourceLinkTitle}>Martin-Albo, J., Nuniez, J. L., Navarro, J. G., & Grijalvo, F.</Text>
+                                    <Text style={styles.SourceLinkDescription}>The Rosenberg Self-Esteem Scale: translation and validation in university students. Span J Psychol. 2007; 10(2), 458-467.</Text>
+                                </View>
+                            </Pressable>
+                            <Pressable
+                                onPress={() => {
+                                    Linking.openURL('https://pubmed.ncbi.nlm.nih.gov/12049439/');
+                                }}
+                                style={({ pressed }) => [
+                                    styles.resourceLink,
+                                    { backgroundColor: pressed ? '#E8A133' : 'transparent' },
+                                ]}
+                            >
+                                <View>
+                                    <Text style={styles.SourceLinkTitle}>Myers, Kathleen, & Winters, Nancy C.</Text>
+                                    <Text style={styles.SourceLinkDescription}>Ten-year review of rating scales. II: Scales for internalizing disorders. 2002; 41(6), 634-659. </Text>
+                                </View>
+                            </Pressable>
+                            <Pressable
+                                style={({ pressed }) => [
+                                    styles.resourceLink,
+                                    { backgroundColor: pressed ? 'transparent' : 'transparent' },
+                                ]}
+                            >
+                                <View>
+                                    <Text style={styles.SourceLinkTitle}>Rosenberg M. Rosenberg self-esteem scale (RSE).</Text>
+                                    <Text style={styles.SourceLinkDescription}>Acceptance and Commitment Therapy. Measures Package, 1965; 61.</Text>
+                                </View>
+                            </Pressable>
+                            <Pressable
+                                style={({ pressed }) => [
+                                    styles.resourceLink,
+                                    { backgroundColor: pressed ? 'transparent' : 'transparent' },
+                                ]}
+                            >
+                                <View>
+                                    <Text style={styles.SourceLinkTitle}>Rosenberg M. Society and the Adolescent Self-Image.</Text>
+                                    <Text style={styles.SourceLinkDescription}>1989 Revised edition. Middletown, CT: Wesleyan University Press.</Text>
+                                </View>
+                            </Pressable>
+                    </View>
                         
                     <Pressable
                         onPress={() => router.back()}
@@ -156,6 +225,18 @@ const Questionnaire: React.FC<Props> = ({ testId, data, onSubmit }: Props) => {
 };
 
 const styles = StyleSheet.create({
+    SourceLinkTitle: {
+        fontSize: 15,
+        fontWeight: 'bold',
+        color: 'black',
+        textAlign: 'left',
+    },
+    
+    SourceLinkDescription: {
+        fontSize: 13,
+        color: 'black',
+        textAlign: 'left',
+    },
     nextStepsText2: {
         fontSize: 14,
         borderRadius: 10, 

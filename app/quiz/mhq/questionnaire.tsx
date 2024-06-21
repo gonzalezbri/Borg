@@ -127,6 +127,27 @@ const Questionnaire: React.FC<Props> = ({ testId, data, onSubmit }: Props) => {
                                 </View>
                             </Pressable>
                     </View>
+                    {/* Sources section */}
+                    <View style={styles.sectionContainer}>
+                            <Text style={styles.sectionTitle}>Sources</Text>
+                            {/* Buttons or Pressables for resources */}
+                            <Pressable
+                                onPress={() => {
+                                    Linking.openURL('https://www.oqmeasures.com/oq-45-2/');
+                                }}
+                                style={({ pressed }) => [
+                                    styles.resourceLink,
+                                    { backgroundColor: pressed ? '#E8A133' : 'transparent' },
+                                ]}
+                            >
+                                <View>
+                                    <Text style={styles.SourceLinkTitle}>M. Lambert, A. Lazarus, S. DeRubeis. Outcome Questionnaire-45.2.</Text>
+                                    <Text style={styles.SourceLinkDescription}>E. Diener, R.A. Emmons, R.J. Larsen, S. Griffin. Satisfaction with Life Scale</Text>
+                                    <Text style={styles.SourceLinkDescription}>C.L.M. Keyes. Mental Health Continuum Short Form (MHC-SF)</Text>
+                                    <Text style={styles.SourceLinkDescription}>S. Shipp, Brief COPE</Text>
+                                </View>
+                            </Pressable>
+                    </View>
                         
                     <Pressable
                         onPress={() => router.back()}
@@ -156,6 +177,18 @@ const Questionnaire: React.FC<Props> = ({ testId, data, onSubmit }: Props) => {
 };
 
 const styles = StyleSheet.create({
+    SourceLinkTitle: {
+        fontSize: 15,
+        fontWeight: 'bold',
+        color: 'black',
+        textAlign: 'left',
+    },
+    
+    SourceLinkDescription: {
+        fontSize: 13,
+        color: 'black',
+        textAlign: 'left',
+    },
     nextStepsText2: {
         fontSize: 14,
         borderRadius: 10, 
