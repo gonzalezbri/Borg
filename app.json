@@ -1,7 +1,7 @@
 {
   "expo": {
     "name": "Therapy Helpers",
-    "slug": "therapy-helpers",
+    "slug": "borgapp",
     "scheme": "borgapp",
     "version": "1.0.0",
     "orientation": "portrait",
@@ -22,6 +22,7 @@
       "infoPlist": {
         "CFBundleDisplayName": "Therapy Helpers"
       }
+
     },
     "android": {
       "adaptiveIcon": {
