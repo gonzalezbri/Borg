@@ -2,7 +2,7 @@
   "expo": {
     "name": "Therapy Helpers",
     "slug": "therapy-helpers",
-    "scheme": "therapy-helpers",
+    "scheme": "borgapp",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/btrfly-logo.jpg",
@@ -17,7 +17,7 @@
     ],
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "com.bgonzalez4717.therapyhelpers",
+      "bundleIdentifier": "com.bgonzalez4717.borgapp",
       "buildNumber": "5",
       "infoPlist": {
         "CFBundleDisplayName": "Therapy Helpers"
@@ -28,7 +28,7 @@
         "foregroundImage": "./assets/main.png",
         "backgroundColor": "#ffffff"
       },
-      "package": "com.bgonzalez4717.therapyhelpers"
+      "package": "com.bgonzalez4717.borgapp"
     },
     "web": {
       "favicon": "./assets/btrfly-logo.jpg"
@@ -41,7 +41,7 @@
         "origin": false
       },
       "eas": {
-        "projectId": "6acf4c60-90e5-4e50-a35f-6a2bc4bf0b6a"
+        "projectId": "c80c2015-1b54-4837-ac97-2c8c8b811ec3"
       }
     }
   }
