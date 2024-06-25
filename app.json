@@ -17,7 +17,7 @@
     ],
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "com.bgonzalez4717.borgapp",
+      "bundleIdentifier": "com.bgonzalez4717.therapyhelpers",
       "buildNumber": "5",
       "infoPlist": {
         "CFBundleDisplayName": "Therapy Helpers"
@@ -28,7 +28,7 @@
         "foregroundImage": "./assets/main.png",
         "backgroundColor": "#ffffff"
       },
-      "package": "com.bgonzalez4717.borgapp"
+      "package": "com.bgonzalez4717.therapyhelpers"
     },
     "web": {
       "favicon": "./assets/btrfly-logo.jpg"
